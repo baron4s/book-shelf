@@ -1,0 +1,271 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.input_section {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.input_section > h2,
+.update-book > h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.input_section > form > .input,
+.update-book > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button,
+.update-book > form > button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span,
+.update-book > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input,
+.update-book > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input_section > form > .input > label,
+.update-book > form > .input > label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline,
+.update-book > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label,
+.update-book > form > .input_inline > label {
+  color: cornflowerblue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.search_section > h2 {
+  color: cornflowerblue;
+}
+
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button {
+  background-color: cornflowerblue;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.book_shelf > h2 {
+  color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: darkgreen;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: darkred;
+  color: white;
+}
+
+.action > .blue {
+  background-color: blue;
+  color: white;
+}
+
+.modal {
+  text-align: center;
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 2em;
+}
+
+.submit-modal,
+.remove-modal {
+  display: none;
+}
+
+.tick {
+  font-size: 80px;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+.input-modal > h2 {
+  margin-bottom: 1.3em;
+}
+
+button[name='closeModal'] {
+  font-weight: bold;
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 50%;
+  padding: 8px;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.update-book {
+  position: relative;
+  width: 50%;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 3px 9px 14px 3px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 3px 9px 14px 3px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 3px 9px 14px 3px rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+}
+
+.wrapper {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+  top: 0;
+  right: 3%;
+  font-weight: bold;
+  font-size: 35px;
+  position: absolute;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .modal {
+    width: 90%;
+  }
+  .update-book {
+    width: 90%;
+  }
+}
